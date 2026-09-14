@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 *, *::after, *::before{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    color: #ffffff;
+    color: #141618;;
 }
 
 html {
-    background-color: #000000;
+    font-family: "Barlow", sans-serif;
+    background-color: #f4f5f6;
 }
 
 a {
@@ -16,18 +19,19 @@ a {
 li {
     list-style: none;
 }
-.title {
 
+.header {
+    background-color: #fff;
 }
 
-.title--small {
+/* Container */
 
+.container {
+    width: 100%;
 }
 
-.content-box--flex-col {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.container--border-bottom {
+    border-bottom: solid 1px #c4c4c4;
 }
 
 .content-box--flex-row {
@@ -37,37 +41,104 @@ li {
     justify-content: center;
 }
 
-.main-mav {
-    padding: 10px 15px;
-    gap: 15px;
-    border-bottom: solid 1px #ffffff;
-}
 
-.nav--horizontal {
+
+/* Nav */
+
+.nav {
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
     display: flex;
+    flex-direction: row;
+    align-items: center;
     gap: 15px;
-    padding: 8px;
+    padding: 5px;
 }
 
-.nav__item {
-    width: fit-content;
+.nav--primary {
+    min-height: 60px;
+    padding: 0 15px;
 }
 
-.nav__item-title {
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 700;
+.nav--subnav {
+    justify-content: center;
+    padding: 5px 10px 10px 10px;
+    border-radius: 4px;
 }
 
-.nav__action {
-    letter-spacing: -3px;
-    font-weight: 900;
+.nav__logo {
+    max-width: 300px;
+    height: 60px;
+}
+
+.nav__section {
+
+}
+
+.nav__section--90deg {
     transform: rotate(90deg);
 }
 
-.nav__action-icon {
+.action {
+    background-color: transparent;
+    border: none;
     user-select: none;
+    cursor: pointer;
+}
+
+.action--nav-menu {
+    font-weight: 800;
+    font-size: 25px;
+    letter-spacing: -6px;
+}
+
+.action--nav-newsletter {
+    font-weight: 700;
+    font-size: .9rem;
+    letter-spacing: .01rem;
+    padding: 5px 8px;
+    border: solid 3px #141618;
+    border-radius: 16px;
 }
 
 .spacer {
     flex-grow: 1;
+}
+
+/* Menu */
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu__item {
+    width: fit-content;
+    padding: 6px 12px;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.menu__item:hover {
+    text-decoration: underline;
+}
+
+/* Menu Modifications */
+
+.menu--subnav {
+    width: 100%;
+} 
+
+.menu__title--subnav {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .menu--nav {
+        display: none;
+    }
 }
